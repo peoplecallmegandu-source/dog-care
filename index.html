@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pawsome Dogs — Home</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { height: 100%; }
+    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+  </style>
+</head>
+<body style="font-family: 'Poppins', sans-serif;" class="bg-gradient-to-b from-white via-amber-50 to-amber-100 text-gray-800 w-full min-h-screen">
+  
+  <header class="w-full bg-white/60 backdrop-blur sticky top-0 z-50 shadow-sm">
+    <div class="w-full flex items-center justify-between px-6 py-4">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center gap-3">
+        <div class="text-2xl">🐶</div>
+        <div class="text-lg font-semibold">Pawsome Dogs</div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 font-medium">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="hover:text-amber-600 transition">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="hover:text-amber-600 transition">About</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="hover:text-amber-600 transition">Contact</a>
+        <a href="#gallery" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Gallery</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="navToggle" aria-label="Toggle menu" class="p-2 rounded-md bg-amber-500 text-white hover:bg-amber-600 transition">Menu</button>
+      </div>
+    </div>
+    
+    <div id="mobileNav" class="md:hidden w-full bg-white/90 backdrop-blur px-6 pb-4 hidden">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="block py-2 border-b">Home</a>
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="block py-2 border-b">About</a>
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="block py-2 border-b">Contact</a>
+      <a href="#gallery" class="block py-2">Gallery</a>
+    </div>
+  </header>
+
+  
+  <main class="w-full max-w-none">
+    <section class="w-full relative">
+      <div class="w-full h-[52vh] md:h-[64vh] bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.pexels.com/photos/22743620/pexels-photo-22743620.jpeg?auto=compress&cs=tinysrgb&h=650&w=940')">
+        <div class="w-full bg-gradient-to-b from-black/25 via-black/10 to-transparent p-6">
+          <div class="w-full text-center text-white py-12">
+            <h1 class="text-3xl md:text-5xl font-bold drop-shadow-lg">Discover Dogs, Celebrate Companionship</h1>
+            <p class="mt-4 text-sm md:text-lg max-w-3xl mx-auto drop-shadow">Stories, care guides, adoptable buddies and a joyful community for every dog lover.</p>
+            <div class="mt-6 flex items-center justify-center gap-4">
+              <a href="#featured" class="px-5 py-3 bg-white text-amber-600 rounded-full font-semibold hover:scale-105 transition shadow">Explore Featured</a>
+              <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="px-5 py-3 border border-white text-white rounded-full hover:bg-white/10 transition">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="featured" class="w-full px-6 py-12 bg-white/60">
+      <div class="w-full flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-full md:w-1/2">
+          <div class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
+            <img id="carouselImage" src="https://pixabay.com/get/g1ac88d5752e5f46da15e1a1b4a2711c33f6c0d89bbbd18f252e95c7f4a5dfa6cbd8460542b22e761b6857feea7c65dee1a4a79ab927732bff6815828e4bedbe8_640.jpg" alt="Featured dog" class="w-full h-72 object-cover transition-transform duration-500 transform hover:scale-105" />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="p-4">
+            <h2 id="carouselTitle" class="text-2xl font-bold">Max — The Curious Beagle</h2>
+            <p id="carouselText" class="mt-3 text-gray-700">Max loves sniffing new trails and making fast friends. He thrives on playtime, short hikes and plenty of belly rubs.</p>
+            <div class="mt-6 flex items-center gap-4">
+              <button id="prevBtn" class="px-4 py-2 bg-amber-100 text-amber-700 rounded-lg hover:bg-amber-200 transition">Prev</button>
+              <button id="nextBtn" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Next</button>
+              <button id="adoptBtn" class="ml-auto px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition">Adopt</button>
+            </div>
+            <div class="mt-4 text-sm text-gray-500">Tip: Use the arrows to browse more featured pups. Click Adopt to open the contact form pre-filled.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="gallery" class="w-full px-6 py-12">
+      <h3 class="text-2xl font-bold mb-6">Gallery</h3>
+      <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://images.pexels.com/photos/3798242/pexels-photo-3798242.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Dog 1" class="w-full h-40 object-cover" />
+        </div>
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1583551536442-0fc55ac443f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw4fHxzbWFsbCUyMHRlcnJpZXIlMjBzbWlsaW5nJTIwd2l0aCUyMHRvbmd1ZSUyMG91dCUyMHBvcnRyYWl0fGVufDB8MHx8fDE3NTUzNDAyMjB8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Dog 2" class="w-full h-40 object-cover" />
+        </div>
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1739732249733-21b8987cd81d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxMHx8aHVza3klMjBydW5uaW5nJTIwdGhyb3VnaCUyMHNub3clMkMlMjBqb3lmdWwlMjBleHByZXNzaW9ufGVufDB8MHx8fDE3NTUzNDAyMjN8MA&ixlib=rb-4.1.0&q=80&w=1080" alt="Dog 3" class="w-full h-40 object-cover" />
+        </div>
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1638766211656-94fbc5752af7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw0fHxncm91cCUyMG9mJTIwZG9ncyUyMGF0JTIwYSUyMGRvZyUyMHBhcmslMjBwbGF5aW5nJTIwdG9nZXRoZXJ8ZW58MHwwfHx8MTc1NTM0MDIyOXww&ixlib=rb-4.1.0&q=80&w=1080" alt="Dog 4" class="w-full h-40 object-cover" />
+        </div>
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://images.pexels.com/photos/26312018/pexels-photo-26312018.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Dog 5" class="w-full h-40 object-cover" />
+        </div>
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://pixabay.com/get/g0e59fd882d3de16fbffb30c8f537a9be07205d552a88542caf3c9b89cb2471ebe976cacbb0e6e1fcb8852a9e7a0607943ac70080e09dcf7536c0a93031b34014_640.jpg" alt="Dog 6" class="w-full h-40 object-cover" />
+        </div>
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1576686271442-c10befe0b77c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHwxfHxib3JkZXIlMjBjb2xsaWUlMjBjYXRjaGluZyUyMGZyaXNiZWUlMjBtaWRhaXJ8ZW58MHwwfHx8MTc1NTM0MDIzN3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Dog 7" class="w-full h-40 object-cover" />
+        </div>
+        <div class="w-full overflow-hidden rounded-lg shadow hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1755010146644-3779da9a577c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3ODkyNDZ8MHwxfHNlYXJjaHw2fHxwb29kbGUlMjBzaXR0aW5nJTIwZWxlZ2FudGx5JTJDJTIwc3R1ZGlvJTIwcG9ydHJhaXR8ZW58MHwwfHx8MTc1NTM0MDI0OHww&ixlib=rb-4.1.0&q=80&w=1080" alt="Dog 8" class="w-full h-40 object-cover" />
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="w-full px-6 py-12 bg-amber-50">
+      <div class="w-full flex flex-col md:flex-row items-stretch gap-6">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="w-full md:w-1/3 p-6 bg-white rounded-xl shadow hover:scale-102 transition transform hover:-translate-y-1">
+          <h4 class="font-semibold text-lg">About Our Mission</h4>
+          <p class="mt-2 text-sm text-gray-600">Learn why we’re passionate about dogs and how we support adoption, education and rescue.</p>
+        </a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="w-full md:w-1/3 p-6 bg-white rounded-xl shadow hover:scale-102 transition transform hover:-translate-y-1">
+          <h4 class="font-semibold text-lg">Get in Touch</h4>
+          <p class="mt-2 text-sm text-gray-600">Questions about adoption, partnerships or submitting a story? Reach out to our friendly team.</p>
+        </a>
+        <a href="#gallery" class="w-full md:w-1/3 p-6 bg-white rounded-xl shadow hover:scale-102 transition transform hover:-translate-y-1">
+          <h4 class="font-semibold text-lg">Browse the Gallery</h4>
+          <p class="mt-2 text-sm text-gray-600">See more lovable faces and feel-good stories from our community.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer class="w-full bg-white/90 px-6 py-8 mt-8">
+    <div class="w-full flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="text-2xl">🐾</div>
+        <div>
+          <div class="font-semibold">Pawsome Dogs</div>
+          <div class="text-sm text-gray-600">Share. Adopt. Love.</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 text-gray-600">
+        <a href="#" class="hover:text-amber-600 transition">Instagram</a>
+        <a href="#" class="hover:text-amber-600 transition">Facebook</a>
+        <a href="#" class="hover:text-amber-600 transition">Twitter</a>
+      </div>
+    </div>
+    <div class="mt-6 text-sm text-gray-500">© <span id="year"></span> Pawsome Dogs — All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle && navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple carousel data
+    const items = [
+      {
+        title: 'Max — The Curious Beagle',
+        text: 'Max loves sniffing new trails and making fast friends. He thrives on playtime, short hikes and plenty of belly rubs.',
+        img: "https://pixabay.com/get/gc380ea238ad9b3da74e1803bb8dcf560c29046e0b688203a636d6d9dbd2449312fa791599055c9134e77c77166e5d4180e7d0920c9108dddb4d31e86ef9cffee_640.jpg"
+      },
+      {
+        title: 'Bella — Energetic Labrador',
+        text: 'Bella is playful and energetic. Loves water, fetch and being the life of the dog park.',
+        img: "https://pixabay.com/get/ge91d7a8a3a682adb62a02b45a8bf31412a7b759e53860ebd5ce9ca6e55505859c3f84a6b808a42b92352dbd116c0d956_640.jpg"
+      },
+      {
+        title: 'Luna — Gentle Shepherd Mix',
+        text: 'Luna is calm, smart and affectionate. Perfect for families and gentle on small children.',
+        img: "https://images.pexels.com/photos/7515599/pexels-photo-7515599.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+      }
+    ];
+
+    let idx = 0;
+    const imgEl = document.getElementById('carouselImage');
+    const titleEl = document.getElementById('carouselTitle');
+    const textEl = document.getElementById('carouselText');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const adoptBtn = document.getElementById('adoptBtn');
+
+    function show(i){
+      idx = (i + items.length) % items.length;
+      imgEl.src = items[idx].img;
+      titleEl.textContent = items[idx].title;
+      textEl.textContent = items[idx].text;
+    }
+
+    prevBtn && prevBtn.addEventListener('click', () => show(idx - 1));
+    nextBtn && nextBtn.addEventListener('click', () => show(idx + 1));
+
+    // Auto rotate every 6s
+    setInterval(() => show(idx + 1), 6000);
+
+    // Adopt button pre-fill contact form and navigate
+    adoptBtn && adoptBtn.addEventListener('click', () => {
+      const url = new URL(window.location.origin + '/contact.html');
+      url.searchParams.set('interest', items[idx].title);
+      window.location.href = url.toString();
+    });
+  </script>
+</body>
+</html>
