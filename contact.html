@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Pawsome Dogs</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+  </style>
+</head>
+<body style="font-family: 'Poppins', sans-serif;" class="w-full min-h-screen bg-gradient-to-b from-white to-amber-50 text-gray-800">
+  <header class="w-full bg-white/60 backdrop-blur sticky top-0 z-40 shadow-sm">
+    <div class="w-full flex items-center justify-between px-6 py-4">
+      <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="flex items-center gap-3">
+        <div class="text-2xl">🐶</div>
+        <div class="text-lg font-semibold">Pawsome Dogs</div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 font-medium">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="hover:text-amber-600 transition">Home</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'about.html\'); return false;" class="hover:text-amber-600 transition">About</a>
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'contact.html\'); return false;" class="hover:text-amber-600 transition">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <a href="#" onclick="window.parent.handlePreviewNavigation(\'index.html\'); return false;" class="px-3 py-2 bg-amber-500 text-white rounded-md">Menu</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full max-w-none px-6 py-12">
+    <h1 class="text-3xl font-bold mb-4">Contact Us</h1>
+    <p class="text-gray-600 mb-6">Have questions about a dog, adoption or want to contribute? Fill out the form and we'll get back to you within 48 hours.</p>
+
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="w-full">
+        <form id="contactForm" class="w-full p-6 bg-white rounded-xl shadow">
+          <label class="block mb-2 text-sm font-medium">Your Name</label>
+          <input id="name" name="name" type="text" class="w-full p-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-amber-300" required />
+
+          <label class="block mt-4 mb-2 text-sm font-medium">Email</label>
+          <input id="email" name="email" type="email" class="w-full p-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-amber-300" required />
+
+          <label class="block mt-4 mb-2 text-sm font-medium">Subject</label>
+          <input id="subject" name="subject" type="text" class="w-full p-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-amber-300" />
+
+          <label class="block mt-4 mb-2 text-sm font-medium">Message</label>
+          <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-amber-300" required></textarea>
+
+          <label class="block mt-4 mb-2 text-sm font-medium">Interested In</label>
+          <input id="interest" name="interest" type="text" class="w-full p-3 rounded-md border focus:outline-none focus:ring-2 focus:ring-amber-300" placeholder="e.g. Bella — Energetic Labrador" />
+
+          <div class="mt-6 flex items-center gap-4">
+            <button type="submit" class="px-6 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Send Message</button>
+            <button id="clearBtn" type="button" class="px-4 py-2 border rounded-lg">Clear</button>
+          </div>
+          <div id="formMsg" class="mt-4 text-sm"></div>
+        </form>
+      </div>
+
+      <div class="w-full space-y-6">
+        <div class="p-6 bg-white rounded-xl shadow">
+          <h3 class="font-semibold">Visit Us</h3>
+          <p class="text-sm text-gray-600 mt-2">We operate by appointment and through partner shelters. Contact us to schedule a visit or foster meetup.</p>
+          <div class="mt-3 text-sm text-gray-500">
+            <div>Phone: (555) 012-3456</div>
+            <div>Email: hello@pawsomedogs.example</div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl shadow">
+          <h3 class="font-semibold">Map</h3>
+          <p class="text-sm text-gray-600 mt-2">Our central hub — exact meeting locations depend on the adoption case.</p>
+          <div class="mt-4 w-full rounded overflow-hidden shadow">
+            <img src="https://pixabay.com/get/gd51269e8a7ce4041ee08e9b88c06cda5a19ba23ae4a48572cbce2b279bac4694543141cb05a3b352502743327755e48773ce24d91c5009726d4efb88fa1d62a6_640.jpg" alt="Map placeholder" class="w-full h-48 object-cover" />
+          </div>
+        </div>
+
+        <div class="p-6 bg-white rounded-xl shadow">
+          <h3 class="font-semibold">Get social</h3>
+          <p class="text-sm text-gray-600 mt-2">Follow our latest adoptable dogs and community stories.</p>
+          <div class="mt-3 flex gap-3">
+            <a href="#" class="px-3 py-2 bg-pink-500 text-white rounded hover:scale-105 transition">Instagram</a>
+            <a href="#" class="px-3 py-2 bg-blue-600 text-white rounded hover:scale-105 transition">Facebook</a>
+            <a href="#" class="px-3 py-2 bg-sky-400 text-white rounded hover:scale-105 transition">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full px-6 py-6 bg-white/90 mt-8">
+    <div class="w-full flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="text-2xl">🐾</div>
+        <div>
+          <div class="font-semibold">Pawsome Dogs</div>
+          <div class="text-sm text-gray-600">Helping dogs find homes</div>
+        </div>
+      </div>
+      <div class="text-sm text-gray-500">© <span id="year"></span> Pawsome Dogs</div>
+    </div>
+  </footer>
+
+  <script>
+    // Fill interest from query string if present
+    const params = new URLSearchParams(window.location.search);
+    const interest = params.get('interest');
+    if (interest) {
+      document.getElementById('interest').value = interest;
+    }
+
+    const form = document.getElementById('contactForm');
+    const formMsg = document.getElementById('formMsg');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !message) {
+        formMsg.textContent = 'Please complete all required fields.';
+        formMsg.className = 'text-red-600';
+        return;
+      }
+
+      // Simulate sending
+      formMsg.textContent = 'Sending...';
+      formMsg.className = 'text-gray-600';
+      setTimeout(() => {
+        formMsg.textContent = 'Thanks! Your message has been sent. We will contact you shortly.';
+        formMsg.className = 'text-green-600';
+        form.reset();
+      }, 1200);
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      form.reset();
+      formMsg.textContent = '';
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
